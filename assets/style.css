@@ -672,6 +672,40 @@ section:nth-of-type(even) { background: var(--white); }
 .member-note { margin-top: 1rem; color: #fff; font-size: 0.9rem; max-width: 46rem; }
 .member-note a { color: #fff; }
 
+/* Approved members (members.json), as place cards on the red tablecloth. */
+.members { margin-top: 4rem; }
+.members-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 1.25rem;
+}
+.member-list { list-style: none; display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.member {
+  --c: var(--banana);
+  display: flex;
+  flex-direction: column;
+  padding: 0.65rem 1rem 0.7rem;
+  background: var(--white);
+  color: var(--black);
+  border: 2px solid var(--black);
+  border-radius: 6px;
+  border-top: 8px solid var(--c);
+  box-shadow: 4px 4px 0 var(--black);
+  position: relative;
+}
+.member:nth-child(5n+2) { --c: var(--orange); }
+.member:nth-child(5n+3) { --c: #8fd16a; }
+.member:nth-child(5n+4) { --c: #c9a3e0; }
+.member:nth-child(5n+5) { --c: #f7a8c4; }
+.member--founder { --c: var(--black) !important; }
+.member-chip-name { font-weight: 800; letter-spacing: -0.01em; }
+.member-chip-meta { font-size: 0.7rem; color: var(--mid); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.member--founder .member-chip-meta { font-family: var(--font); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.6rem; }
+.member-chip-badges { position: absolute; top: -0.9rem; right: -0.6rem; font-size: 1.1rem; }
+
 /* ─── FOOTER ─── */
 footer.site-footer { background: var(--white); padding: 3rem 0; }
 footer.site-footer .container {

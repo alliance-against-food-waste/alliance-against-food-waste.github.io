@@ -1,0 +1,31 @@
+name: New member
+description: Join the Alliance Against Food Waste. A founding member approves, and you appear on the website.
+title: "New member: "
+labels: ["new member"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        🍽️ **Welcome to the table.** Once a founding member approves this issue, your name is added to the
+        [list of members](https://alliance-against-food-waste.github.io/#members) automatically.
+        Your name will be public. Only fill this in if you are happy with that.
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: As it should appear on the website. Letters, spaces, apostrophes, dots and hyphens; up to 60 characters.
+      placeholder: Hungry McEatface
+    validations:
+      required: true
+  - type: textarea
+    id: commitments
+    attributes:
+      label: Commitments
+      description: Filled in from the pledge on the website. The first four are required.
+      value: |
+        - [x] I eat up.
+        - [x] I take only what I will finish.
+        - [x] I honour the Fruit Basket Protocol.
+        - [x] I carry every fruit basket I meet to the table.
+    validations:
+      required: true

@@ -385,11 +385,16 @@
         </div>
         <div class="member-actions">
           <button type="button" class="btn btn--banana" id="printCard">Print my card</button>
-          <a class="btn" id="officialLink" href="#" target="_blank" rel="noopener">Tell the founders</a>
+          <a class="btn" id="officialLink" href="#" target="_blank" rel="noopener">Get on the list</a>
           <button type="button" class="btn" id="resignBtn">Sign again</button>
         </div>
-        <p class="member-note">Your pledge is kept on this device only. “Tell the founders” opens a pre-filled GitHub issue so the founding members can add you to the roll, if you want them to.</p>
+        <p class="member-note">Your card is kept on this device only. To be listed below, click “Get on the list” and submit the pre-filled GitHub issue (you need a GitHub account). Once a founding member approves it, your name appears here automatically.</p>
       </div>
+    </div>
+
+    <div class="sec-full members" id="members" hidden>
+      <h3 class="members-title">At the table: <span id="memberCount"></span></h3>
+      <ul class="member-list" id="memberList"></ul>
     </div>
   </div>
 </section>
@@ -546,10 +551,14 @@
     var list = document.getElementById('cardVows');
     list.innerHTML = '';
     p.vows.forEach(function (v) { var li = document.createElement('li'); li.textContent = v; list.appendChild(li); });
-    var body = 'I, ' + p.name + ', have taken the pledge of the Alliance Against Food Waste and commit, from now on:\n\n' +
-      p.vows.map(function (v) { return '- [x] ' + v; }).join('\n') + '\n\nPlease add me to the roll of members. 🍽️';
-    document.getElementById('officialLink').href = ISSUES + '?title=' + encodeURIComponent('New member: ' + p.name) +
-      '&body=' + encodeURIComponent(body) + '&labels=' + encodeURIComponent('new member');
+    // Pre-fills the "New member" issue form (.github/ISSUE_TEMPLATE/new-member.yml)
+    // by field id. Once a founder labels it `approved`, a workflow adds the
+    // person to members.json (.github/workflows/add-member.yml).
+    var commitments = p.vows.map(function (v) { return '- [x] ' + v; }).join('\n');
+    document.getElementById('officialLink').href = ISSUES + '?template=new-member.yml' +
+      '&title=' + encodeURIComponent('New member: ' + p.name) +
+      '&name=' + encodeURIComponent(p.name) +
+      '&commitments=' + encodeURIComponent(commitments);
     form.hidden = true;
     cardWrap.hidden = false;
   }
@@ -560,6 +569,11 @@
     var required = form.querySelectorAll('input[name="vow"][required]');
     var missing = Array.prototype.some.call(required, function (c) { return !c.checked; });
     if (!name) { error.textContent = 'A pledge needs a name. Even “Anonymous Apple” will do.'; nameInput.focus(); return; }
+    // Same rule the add-member workflow enforces, so nobody signs a card that
+    // cannot make it onto the list.
+    if (!/^[\p{L}\p{M}\p{N}][\p{L}\p{M}\p{N} .'’-]{0,59}$/u.test(name.replace(/\s+/g, ' '))) {
+      error.textContent = 'Names may contain letters, digits, spaces, apostrophes, dots and hyphens. No emoji, sadly.'; nameInput.focus(); return;
+    }
     if (missing) { error.textContent = 'The first four commitments are not optional. That is rather the point.'; return; }
     error.textContent = '';
     var vows = Array.prototype.map.call(form.querySelectorAll('input[name="vow"]:checked'), function (c) { return c.value; });
@@ -587,6 +601,39 @@
     var savedPledge = JSON.parse(localStorage.getItem('aafw-pledge'));
     if (savedPledge && savedPledge.name) showCard(savedPledge);
   } catch (err) {}
+
+  // ─── Members ───
+  // members.json is written by the add-member workflow. Names go in as text
+  // only, never as HTML. If the file cannot be loaded (e.g. opened from disk),
+  // the list simply stays hidden.
+  fetch('members.json', { cache: 'no-cache' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (members) {
+      var list = document.getElementById('memberList');
+      members.forEach(function (m) {
+        var li = document.createElement('li');
+        li.className = 'member' + (m.founder ? ' member--founder' : '');
+        var name = document.createElement('span');
+        name.className = 'member-chip-name';
+        name.textContent = m.name;
+        var meta = document.createElement('span');
+        meta.className = 'member-chip-meta';
+        meta.textContent = m.founder ? 'Founding member' : 'No. ' + m.no;
+        li.appendChild(name);
+        li.appendChild(meta);
+        if (m.bonus || m.heroic) {
+          var badges = document.createElement('span');
+          badges.className = 'member-chip-badges';
+          if (m.bonus) badges.appendChild(Object.assign(document.createElement('span'), { textContent: '🍇', title: 'Arranges fruit in ways that afford eating' }));
+          if (m.heroic) badges.appendChild(Object.assign(document.createElement('span'), { textContent: '🍰', title: 'Volunteers for the last slice of cake' }));
+          li.appendChild(badges);
+        }
+        list.appendChild(li);
+      });
+      document.getElementById('memberCount').textContent = members.length + (members.length === 1 ? ' member' : ' members') + ' and counting';
+      document.getElementById('members').hidden = false;
+    })
+    .catch(function () {});
 })();
 </script>
 </body>
