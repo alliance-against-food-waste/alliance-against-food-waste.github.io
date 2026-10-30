@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- The alliance mark: a cleared-ish plate in FuSo's circle, with circuit
+       traces in FuSo green running out to the fruit. The apple has a bite out
+       of it, because we eat up. -->
+  <defs>
+    <mask id="bite">
+      <rect width="400" height="400" fill="#fff"/>
+      <circle cx="222" cy="150" r="17" fill="#000"/>
+      <circle cx="226" cy="178" r="15" fill="#000"/>
+      <circle cx="218" cy="205" r="16" fill="#000"/>
+    </mask>
+  </defs>
+
+  <!-- plate -->
+  <circle cx="200" cy="200" r="190" fill="#fff" stroke="#111" stroke-width="8"/>
+  <circle cx="200" cy="200" r="148" fill="#fff8ec" stroke="#111" stroke-width="2.5"/>
+
+  <!-- circuit traces from the rim to the fruit -->
+  <g fill="none" stroke="#00802F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M52 200 H92 L112 180"/>
+    <path d="M200 52 V76 L218 94"/>
+    <path d="M348 200 H316 L300 216"/>
+    <path d="M200 348 V318 L182 300"/>
+  </g>
+  <g fill="#fff" stroke="#00802F" stroke-width="5">
+    <circle cx="52" cy="200" r="8"/>
+    <circle cx="200" cy="52" r="8"/>
+    <circle cx="348" cy="200" r="8"/>
+    <circle cx="200" cy="348" r="8"/>
+  </g>
+
+  <!-- grapes -->
+  <g stroke="#111" stroke-width="3">
+    <path d="M262 98 q6 -14 20 -18" fill="none" stroke="#5b3a1a" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="246" cy="112" r="14" fill="#8e44ad"/>
+    <circle cx="272" cy="110" r="14" fill="#8e44ad"/>
+    <circle cx="296" cy="118" r="14" fill="#8e44ad"/>
+    <circle cx="258" cy="134" r="14" fill="#7b2d8e"/>
+    <circle cx="284" cy="136" r="14" fill="#7b2d8e"/>
+    <circle cx="270" cy="157" r="14" fill="#6a1f7c"/>
+  </g>
+
+  <!-- banana -->
+  <path d="M118 262 C150 312 236 322 286 284 C292 279 289 270 281 272 C236 292 170 288 132 250 C126 244 114 252 118 262 Z"
+        fill="#ffc93c" stroke="#111" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M116 256 l-8 -6" stroke="#5b3a1a" stroke-width="6" stroke-linecap="round"/>
+  <path d="M150 276 C185 298 235 300 270 284" fill="none" stroke="#e0a800" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- orange -->
+  <circle cx="272" cy="214" r="36" fill="#f28c28" stroke="#111" stroke-width="3"/>
+  <g fill="#d8701a">
+    <circle cx="258" cy="204" r="2.2"/><circle cx="282" cy="200" r="2.2"/>
+    <circle cx="290" cy="222" r="2.2"/><circle cx="266" cy="230" r="2.2"/>
+    <circle cx="276" cy="214" r="2.2"/>
+  </g>
+  <path d="M270 180 l4 -8 l6 6" fill="#00802F" stroke="#111" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- apple, with a bite -->
+  <g mask="url(#bite)">
+    <path d="M168 132 C140 116 104 128 104 168 C104 212 136 236 156 234 C164 233 168 230 172 230 C176 230 180 233 188 234 C208 236 236 212 236 168 C236 128 200 116 172 132 Z"
+          fill="#e63b2e" stroke="#111" stroke-width="3" stroke-linejoin="round"/>
+    <ellipse cx="132" cy="160" rx="8" ry="16" fill="#ff7a6e" transform="rotate(20 132 160)"/>
+  </g>
+  <path d="M170 132 C170 118 174 108 182 100" fill="none" stroke="#5b3a1a" stroke-width="5" stroke-linecap="round"/>
+  <path d="M178 112 C190 96 212 96 220 104 C208 118 190 120 178 112 Z" fill="#00802F" stroke="#111" stroke-width="2.5" stroke-linejoin="round"/>
+</svg>

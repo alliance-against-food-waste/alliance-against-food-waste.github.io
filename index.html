@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alliance Against Food Waste | We eat up. | Future Society Hub</title>
+  <meta name="description" content="The Alliance Against Food Waste: we eat up, and we rescue the university fruit basket before it spoils. Founded by Luka Bekavac and Simon Mayer at the Future Society Hub, University of St.Gallen. Take the pledge.">
+  <meta name="author" content="Alliance Against Food Waste">
+  <link rel="icon" href="assets/plate.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://alliance-against-food-waste.github.io/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Alliance Against Food Waste">
+  <meta property="og:url" content="https://alliance-against-food-waste.github.io/">
+  <meta property="og:title" content="Alliance Against Food Waste | We eat up.">
+  <meta property="og:description" content="We eat up, and we rescue the fruit basket before it spoils. A Future Society Hub initiative. Take the pledge.">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="container">
+    <div class="nav-lockup">
+      <a class="nav-parent" href="https://futuresociety.ch/" target="_blank" rel="noopener" title="Future Society Hub">
+        <img src="assets/fuso-logo-text-only.svg" alt="FuSo, Future Society Hub">
+      </a>
+      <span class="nav-divider" aria-hidden="true"></span>
+      <a class="nav-wordmark" href="#hero">Alliance Against <span class="fruity"><span>F</span><span>o</span><span>o</span><span>d</span></span> Waste</a>
+    </div>
+    <ul id="navMenu">
+      <li><a href="#mission">Mission</a></li>
+      <li><a href="#protocol">Fruit Basket Protocol</a></li>
+      <li><a href="#basket">Basket-o-meter</a></li>
+      <li><a href="#founders">Founders</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li class="nav-cta"><a class="btn btn--primary btn--small" href="#join">Join</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div id="hero">
+  <div class="hero-text">
+    <p class="hero-label"><a href="https://futuresociety.ch/" target="_blank" rel="noopener">Future Society Hub</a> · University of St.Gallen</p>
+    <h1><span class="hero-line">Alliance</span> <span class="hero-line">Against <span class="fruity"><span>F</span><span>o</span><span>o</span><span>d</span></span></span> <span class="hero-line">Waste</span></h1>
+    <p class="hero-slogan">we eat up.</p>
+    <p class="hero-sub">A cross-disciplinary alliance working across the full plate:<br>Serve <span class="chain-step"><span class="chain-arrow">&rsaquo;</span> Eat</span> <span class="chain-step"><span class="chain-arrow">&rsaquo;</span> Clean Plate</span> <span class="chain-step"><span class="chain-arrow">&rsaquo;</span> Repeat</span></p>
+    <div class="hero-cta">
+      <a class="btn btn--primary" href="#join">Take the pledge</a>
+      <a class="btn btn--banana" href="#basket">Check the fruit basket</a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <!-- Easter egg: clicking the plate makes it rain fruit (see script). -->
+    <button type="button" class="plate-btn" id="plate" aria-label="Shake the plate">
+      <img src="assets/plate.svg" alt="Alliance Against Food Waste logo: a plate with an apple (bitten), grapes, an orange and a banana">
+    </button>
+  </div>
+</div>
+
+<!-- MISSION INTRO -->
+<div class="intro-standalone">
+  <div class="container grid">
+    <div class="about-intro">
+      <span class="intro-caret" aria-hidden="true">&rsaquo;</span>
+      <p>The Alliance Against Food Waste is a coalition of people who have looked at a half-eaten plate and said: <em>not on my watch.</em> Our primary objective is simple: <strong>we eat up.</strong> Our secondary objective is the university fruit basket, which we rescue, according to a strict and legally dubious protocol, before a single banana goes brown.</p>
+    </div>
+  </div>
+</div>
+
+<a class="parent-bar" href="https://futuresociety.ch/" target="_blank" rel="noopener">
+  <span class="parent-bar-inner">
+    <span class="parent-bar-label">An initiative of</span>
+    <span class="parent-bar-name">Future Society Hub</span>
+    <span class="parent-bar-desc">where tech and society fuse (and lunch gets finished)</span>
+    <span class="parent-bar-go">futuresociety.ch &nearr;</span>
+  </span>
+</a>
+<div class="gingham" aria-hidden="true"></div>
+
+<!-- MISSION -->
+<section id="mission">
+  <div class="container grid">
+    <div class="section-label" aria-hidden="true"></div>
+    <div class="sec-head">
+      <h2>Food is for eating. <span class="hl">So we eat it.</span></h2>
+    </div>
+    <div class="sec-aside">
+      <p>Roughly a third of all food produced never gets eaten. We cannot fix global supply chains over lunch, but we can fix the last thirty centimetres between the plate and the bin.</p>
+      <p>Membership is open to anyone with a mouth and a sense of responsibility. There are no fees, only seconds.</p>
+    </div>
+
+    <div class="sec-full">
+      <div class="stats">
+        <div class="stat"><div class="stat-num">0 g</div><p>Target food waste per member per meal</p></div>
+        <div class="stat"><div class="stat-num">2</div><p>Founding members, both with clean plates</p></div>
+        <div class="stat"><div class="stat-num">∞</div><p>Second helpings permitted</p></div>
+        <div class="stat"><div class="stat-num">2 Fridays</div><p>Maximum dwell time of a fruit basket</p></div>
+      </div>
+
+      <div class="principles">
+        <div class="principle" style="--c: var(--tomato)">
+          <span class="principle-emoji" aria-hidden="true">🍽️</span>
+          <p class="principle-num">Principle 01</p>
+          <h3>We eat up.</h3>
+          <p>What is on your plate is your responsibility. The plate is done when it is clean, not when you are bored.</p>
+        </div>
+        <div class="principle" style="--c: var(--orange)">
+          <span class="principle-emoji" aria-hidden="true">🥄</span>
+          <p class="principle-num">Principle 02</p>
+          <h3>Portion honestly.</h3>
+          <p>Take what you will finish. You can always go back for more; you cannot un-take a third dumpling.</p>
+        </div>
+        <div class="principle" style="--c: var(--banana)">
+          <span class="principle-emoji" aria-hidden="true">🍌</span>
+          <p class="principle-num">Principle 03</p>
+          <h3>Rescue the fruit basket.</h3>
+          <p>The basket is not decoration. It follows the <a class="text-link" href="#protocol">Fruit Basket Protocol</a>, and so do you.</p>
+        </div>
+        <div class="principle" style="--c: var(--leaf)">
+          <span class="principle-emoji" aria-hidden="true">🥕</span>
+          <p class="principle-num">Principle 04</p>
+          <h3>Wonky is still food.</h3>
+          <p>A crooked carrot tastes exactly like a straight one. A spotty banana is a banana at its peak.</p>
+        </div>
+        <div class="principle" style="--c: var(--plum)">
+          <span class="principle-emoji" aria-hidden="true">🥡</span>
+          <p class="principle-num">Principle 05</p>
+          <h3>Doggy bags, no shame.</h3>
+          <p>Leftovers are tomorrow's lunch. Bring a box. Ask for a box. Be the box.</p>
+        </div>
+        <div class="principle" style="--c: var(--berry)">
+          <span class="principle-emoji" aria-hidden="true">👃</span>
+          <p class="principle-num">Principle 06</p>
+          <h3>Best before is not bad after.</h3>
+          <p>Look, smell, taste. Your senses are older than the label. (Use-by dates on meat and fish are another matter: respect those.)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FRUIT BASKET PROTOCOL -->
+<section id="protocol">
+  <div class="container grid">
+    <div class="section-label" aria-hidden="true"></div>
+    <div class="sec-head">
+      <h2>The Fruit Basket <span class="hl">Protocol</span></h2>
+    </div>
+    <div class="sec-aside">
+      <p>Our university has a fruit basket. It appears, it is admired, and then, too often, it quietly turns into compost. Not any more. The alliance operates under the following policy, reproduced here in full and without amendment.</p>
+    </div>
+
+    <div class="sec-full">
+      <blockquote class="policy-quote">
+        <p>If there is fruit left on the first Friday after the fruit basket has appeared (that’s today), start taking fruit home. If there is fruit left on the second Friday after the fruit basket has appeared, you must take fruit home. If you see a fruit basket on your way in, take it and put it on the table. It is permitted to arrange fruit in ways that afford taking/eating.</p>
+        <footer>The Policy, as announced on Friday, 30 October 2026</footer>
+      </blockquote>
+
+      <div class="timeline">
+        <div class="tl-step" style="--c: var(--leaf)">
+          <p class="tl-when">Day 0</p>
+          <h3>The basket appears</h3>
+          <p>Fruit is for eating at work. Grab an apple. Grab two. Nobody is counting, except the alliance.</p>
+        </div>
+        <div class="tl-step" style="--c: var(--banana)">
+          <p class="tl-when">First Friday after</p>
+          <h3>Fruit left? <span class="verb">Start</span> taking it home.</h3>
+          <p>The weekend is coming and the fruit will not survive it alone. Taking fruit home is now encouraged.</p>
+        </div>
+        <div class="tl-step" style="--c: var(--tomato)">
+          <p class="tl-when">Second Friday after</p>
+          <h3>Fruit left? You <span class="verb" style="color:#fff">must</span> take it home.</h3>
+          <p>Not a suggestion. This is a rescue mission, and you are the helicopter.</p>
+        </div>
+      </div>
+
+      <div class="articles">
+        <div class="article" style="--c: var(--banana)">
+          <span class="article-num">§1</span>
+          <h3>First Friday: permission</h3>
+          <p>If there is fruit left on the first Friday after the basket has appeared, members start taking fruit home.</p>
+          <p class="commentary"><strong>Commentary</strong>“Start” is deliberately open-ended. One pear is a start. So is a bag.</p>
+        </div>
+        <div class="article" style="--c: var(--tomato)">
+          <span class="article-num" style="color:#fff">§2</span>
+          <h3>Second Friday: obligation</h3>
+          <p>If there is fruit left on the second Friday after the basket has appeared, members must take fruit home.</p>
+          <p class="commentary"><strong>Commentary</strong>“I don't like kiwis” is not a recognised defence. Make a smoothie.</p>
+        </div>
+        <div class="article" style="--c: var(--orange)">
+          <span class="article-num">§3</span>
+          <h3>The delivery clause</h3>
+          <p>If you see a fruit basket on your way in, take it and put it on the table.</p>
+          <p class="commentary"><strong>Commentary</strong>A basket in the hallway is a basket nobody eats from. You are its last mile.</p>
+        </div>
+        <div class="article" style="--c: #8fd16a">
+          <span class="article-num">§4</span>
+          <h3>The affordance clause</h3>
+          <p>It is permitted to arrange fruit in ways that afford taking/eating.</p>
+          <p class="commentary"><strong>Commentary</strong>Interaction design applies to bananas too. Ripest on top, the lonely last apple front and centre, nothing buried under the melon.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BASKET-O-METER -->
+<section id="basket">
+  <div class="container grid">
+    <div class="section-label" aria-hidden="true"></div>
+    <div class="sec-head">
+      <h2>The <span class="hl">Basket-o-meter</span></h2>
+    </div>
+    <div class="sec-aside">
+      <p>Unsure what the Protocol requires of you today? Tell the meter when the basket appeared and whether there is fruit left. It will tell you what to do. It is never wrong, only occasionally hungry.</p>
+    </div>
+
+    <div class="sec-full">
+      <div class="meter">
+        <div class="meter-inputs">
+          <div>
+            <label class="field-label" for="basketDate">When did the basket appear?</label>
+            <input type="date" id="basketDate">
+          </div>
+          <div>
+            <span class="field-label" id="fruitLeftLabel">Is there fruit left?</span>
+            <div class="toggle-group" role="group" aria-labelledby="fruitLeftLabel">
+              <button type="button" id="fruitYes" aria-pressed="true">Yes 🍎</button>
+              <button type="button" id="fruitNo" aria-pressed="false">No, empty</button>
+            </div>
+          </div>
+          <p class="meter-hint">Your basket date is remembered on this device, so you only have to set it once per basket.</p>
+        </div>
+        <div class="meter-result" id="meterResult" data-phase="eat" aria-live="polite">
+          <div class="meter-emoji" id="meterEmoji" aria-hidden="true">🍏</div>
+          <div class="meter-status" id="meterStatus">Eat it here.</div>
+          <p class="meter-detail" id="meterDetail"></p>
+          <div class="meter-next" id="meterNext"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDERS -->
+<section id="founders">
+  <div class="container grid">
+    <div class="section-label" aria-hidden="true"></div>
+    <div class="sec-head">
+      <h2>Founding <span class="hl">members</span></h2>
+    </div>
+    <div class="sec-aside">
+      <p>The alliance was founded at the <a class="text-link" href="https://futuresociety.ch/" target="_blank" rel="noopener">Future Society Hub</a> by two people who were tired of watching perfectly good fruit lose its will to live.</p>
+    </div>
+
+    <div class="sec-full founders">
+      <article class="founder" style="--c: var(--banana)">
+        <img src="assets/images/luka.jpg" alt="Luka Bekavac" width="140" height="140" loading="lazy">
+        <div>
+          <p class="founder-role">Founding member</p>
+          <h3>Luka Bekavac</h3>
+          <p>Head of Fruit Basket Affairs. By day a PhD candidate at FuSo auditing recommender systems; by lunchtime, auditing plates.</p>
+          <p class="founder-fav"><strong>Recommends:</strong> finishing what the algorithm, and the canteen, served you.</p>
+        </div>
+      </article>
+      <article class="founder" style="--c: var(--tomato)">
+        <img src="assets/images/simon.jpg" alt="Simon Mayer" width="140" height="140" loading="lazy">
+        <div>
+          <p class="founder-role">Founding member</p>
+          <h3>Simon Mayer</h3>
+          <p>Chief Plate Inspector. By day co-director of FuSo, working on human–machine interaction; by lunchtime, on human–leftover interaction.</p>
+          <p class="founder-fav"><strong>Recommends:</strong> arranging fruit in ways that afford eating.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container grid">
+    <div class="section-label" aria-hidden="true"></div>
+    <div class="sec-head">
+      <h2>Frequently <span class="hl">asked</span> questions</h2>
+    </div>
+    <div class="sec-aside">
+      <p>Answered by the founding members, with their mouths full.</p>
+    </div>
+
+    <div class="sec-full faq">
+      <details>
+        <summary>What if I am genuinely full?</summary>
+        <p>Then you took too much, and Principle 02 has a word for you. In the meantime: box it, take it home, eat it later. Full is temporary. Leftovers keep.</p>
+      </details>
+      <details>
+        <summary>Does a banana peel count as food waste?</summary>
+        <p>No. Peels, cores, pits and stones are exempt. The alliance is ambitious, not unhinged. (Compost them, though.)</p>
+      </details>
+      <details>
+        <summary>The basket appeared on a Friday. Is that the first Friday?</summary>
+        <p>No. The first Friday is the first one <em>after</em> the basket appeared, so you get a full week of eating at work first. The Basket-o-meter knows this.</p>
+      </details>
+      <details>
+        <summary>Somebody else left food on their plate. What do I do?</summary>
+        <p>Lead by example. Finish your own plate, visibly and with relish. Direct intervention in other people's lunches is reserved for founding members, and only if they ask nicely.</p>
+      </details>
+      <details>
+        <summary>Can I leave the alliance?</summary>
+        <p>Yes. But the fruit will know.</p>
+      </details>
+      <details>
+        <summary>Is there a membership fee?</summary>
+        <p>No. Membership is paid for entirely in clean plates.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN -->
+<section id="join">
+  <div class="container grid">
+    <div class="section-label" aria-hidden="true"></div>
+    <div class="sec-head">
+      <h2>Take the <span class="hl">pledge</span></h2>
+    </div>
+    <div class="sec-aside">
+      <p>Joining takes ten seconds and lasts a lifetime of clean plates. Tick the commitments, sign with your name, and receive your official membership card.</p>
+    </div>
+
+    <div class="sec-full pledge-wrap">
+      <form class="pledge" id="pledgeForm" novalidate>
+        <label class="field-label" for="pledgeName">Your name</label>
+        <input type="text" id="pledgeName" autocomplete="name" placeholder="e.g. Hungry McEatface" maxlength="60" required>
+
+        <p class="pledge-oath">I, <strong id="oathName">the undersigned</strong>, hereby join the Alliance Against Food Waste and solemnly commit, from now on:</p>
+        <ul class="pledge-list">
+          <li><label><input type="checkbox" name="vow" value="I eat up." required><span><strong>I eat up.</strong> What is on my plate goes into me, not into the bin.</span></label></li>
+          <li><label><input type="checkbox" name="vow" value="I take only what I will finish." required><span>I take only what I will finish. Seconds yes, leftovers no.</span></label></li>
+          <li><label><input type="checkbox" name="vow" value="I honour the Fruit Basket Protocol." required><span>I honour the Fruit Basket Protocol: I start taking fruit home on the first Friday, and I <em>must</em> on the second.</span></label></li>
+          <li><label><input type="checkbox" name="vow" value="I carry every fruit basket I meet to the table." required><span>I carry every fruit basket I meet on my way in to the table.</span></label></li>
+          <li><label><input type="checkbox" name="vow" value="I arrange fruit in ways that afford eating."><span>I arrange fruit in ways that afford taking and eating.<span class="pledge-tag">Bonus</span></span></label></li>
+          <li><label><input type="checkbox" name="vow" value="I will finish the last slice of cake at events, for the alliance."><span>I volunteer to finish the last slice of cake at events, for the good of the alliance.<span class="pledge-tag">Heroic</span></span></label></li>
+        </ul>
+
+        <div class="pledge-actions">
+          <button type="submit" class="btn btn--primary">Sign &amp; dig in 🍴</button>
+          <span class="pledge-error" id="pledgeError" role="alert"></span>
+        </div>
+      </form>
+
+      <div id="memberCardWrap" hidden>
+        <div class="member-card" id="memberCard">
+          <div class="gingham" aria-hidden="true"></div>
+          <div class="member-card-body">
+            <div>
+              <p class="member-kicker">Alliance Against Food Waste · Member</p>
+              <p class="member-name" id="cardName"></p>
+              <p class="member-no" id="cardNo"></p>
+            </div>
+            <img src="assets/plate.svg" alt="">
+            <ul class="member-vows" id="cardVows"></ul>
+            <div class="member-sign">
+              <span>Signed<b id="cardSig"></b></span>
+              <span>Date<b id="cardDate"></b></span>
+              <span>Witnessed by<b>L. Bekavac &amp; S. Mayer</b></span>
+            </div>
+          </div>
+        </div>
+        <div class="member-actions">
+          <button type="button" class="btn btn--banana" id="printCard">Print my card</button>
+          <a class="btn" id="officialLink" href="#" target="_blank" rel="noopener">Tell the founders</a>
+          <button type="button" class="btn" id="resignBtn">Sign again</button>
+        </div>
+        <p class="member-note">Your pledge is kept on this device only. “Tell the founders” opens a pre-filled GitHub issue so the founding members can add you to the roll, if you want them to.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gingham" aria-hidden="true"></div>
+<footer class="site-footer">
+  <div class="container">
+    <a class="footer-logo" href="#hero">
+      <img src="assets/plate.svg" alt="">
+      <div>
+        <div class="footer-wordmark">Alliance Against Food Waste</div>
+        <div class="footer-tagline">we eat up.</div>
+      </div>
+    </a>
+    <a class="footer-fuso" href="https://futuresociety.ch/" target="_blank" rel="noopener">
+      <img src="assets/fuso-logo-text-only.svg" alt="">
+      <span>An initiative of the<br>Future Society Hub, HSG</span>
+    </a>
+    <p class="footer-small">No food was wasted in the making of this website. One apple was bitten.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // ─── Plate easter egg: fruit rain ───
+  var fruits = ['🍎', '🍌', '🍊', '🍇', '🍐', '🥝', '🍓', '🍑', '🥕', '🍋'];
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.getElementById('plate').addEventListener('click', function () {
+    if (reduceMotion) return;
+    for (var i = 0; i < 24; i++) {
+      var f = document.createElement('span');
+      f.className = 'fruit-drop';
+      f.textContent = fruits[Math.floor(Math.random() * fruits.length)];
+      f.style.left = (Math.random() * 100) + 'vw';
+      f.style.animationDuration = (1.6 + Math.random() * 1.6) + 's';
+      f.style.animationDelay = (Math.random() * 0.6) + 's';
+      f.style.setProperty('--spin', ((Math.random() * 720) - 360) + 'deg');
+      f.addEventListener('animationend', function () { this.remove(); });
+      document.body.appendChild(f);
+    }
+  });
+
+  // ─── Basket-o-meter ───
+  // Dates are handled as local calendar days (midnight), never as instants.
+  var DAY = 86400000;
+  function today() { var d = new Date(); d.setHours(0, 0, 0, 0); return d; }
+  function parseDay(s) { var p = s.split('-'); return new Date(+p[0], p[1] - 1, +p[2]); }
+  function toInput(d) {
+    return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  }
+  function addDays(d, n) { var r = new Date(d); r.setDate(r.getDate() + n); return r; }
+  function daysBetween(a, b) { return Math.round((b - a) / DAY); }
+  function fmt(d) { return d.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' }); }
+  // First Friday strictly after the day the basket appeared.
+  function firstFridayAfter(d) { var n = (5 - d.getDay() + 7) % 7; return addDays(d, n === 0 ? 7 : n); }
+  function inDays(n) { return n === 0 ? 'today' : n === 1 ? 'tomorrow' : 'in ' + n + ' days'; }
+
+  var dateInput = document.getElementById('basketDate');
+  var yesBtn = document.getElementById('fruitYes');
+  var noBtn = document.getElementById('fruitNo');
+  var result = document.getElementById('meterResult');
+  var fruitLeft = true;
+
+  var saved = null;
+  try { saved = localStorage.getItem('aafw-basket-date'); } catch (e) {}
+  if (saved && /^\d{4}-\d{2}-\d{2}$/.test(saved)) {
+    dateInput.value = saved;
+  } else {
+    // Default: Monday of this week.
+    var t = today();
+    dateInput.value = toInput(addDays(t, -((t.getDay() + 6) % 7)));
+  }
+  dateInput.max = toInput(today());
+
+  function render() {
+    var phase, emoji, status, detail, next = '';
+    var t = today();
+    if (!dateInput.value) {
+      phase = 'early'; emoji = '🧺'; status = 'When did the basket appear?';
+      detail = 'Pick a date and the meter will rule.';
+    } else {
+      var d = parseDay(dateInput.value);
+      var f1 = firstFridayAfter(d), f2 = addDays(f1, 7);
+      if (t < d) {
+        phase = 'early'; emoji = '🔮'; status = 'That basket is from the future.';
+        detail = 'The alliance does not yet regulate fruit that has not arrived.';
+      } else if (!fruitLeft) {
+        phase = 'none'; emoji = '🏆'; status = 'Basket empty. Mission accomplished.';
+        detail = 'Every piece of fruit found a home. The founding members are proud of you. Wait for the next basket.';
+      } else if (t < f1) {
+        phase = 'eat'; emoji = '🍏'; status = 'Eat it here.';
+        detail = 'The basket is fresh. Fruit is for eating at work, so help yourself, and arrange what is left so it invites the next person in.';
+        next = 'Take-home permitted from ' + fmt(f1) + ' (' + inDays(daysBetween(t, f1)) + ')';
+      } else if (t < f2) {
+        phase = 'may'; emoji = '🎒';
+        status = daysBetween(f1, t) === 0 ? 'It’s the first Friday. Start taking fruit home.' : 'Start taking fruit home.';
+        detail = 'Protocol §1 is in force. Fruit left after the first Friday should start leaving with you.';
+        next = 'Take-home becomes mandatory on ' + fmt(f2) + ' (' + inDays(daysBetween(t, f2)) + ')';
+      } else {
+        phase = 'must'; emoji = '🚨';
+        status = daysBetween(f2, t) === 0 ? 'Second Friday. You MUST take fruit home.' : 'You MUST take fruit home.';
+        detail = 'Protocol §2 is in force. This is not a drill. Fill your bag, your pockets and, if necessary, your hood.';
+        var over = daysBetween(f2, t);
+        next = over > 0 ? 'Mandatory since ' + fmt(f2) + ' (' + over + (over === 1 ? ' day' : ' days') + ' ago)' : 'Mandatory as of today';
+      }
+    }
+    result.dataset.phase = phase;
+    document.getElementById('meterEmoji').textContent = emoji;
+    document.getElementById('meterStatus').textContent = status;
+    document.getElementById('meterDetail').textContent = detail;
+    document.getElementById('meterNext').textContent = next;
+    document.getElementById('meterNext').hidden = !next;
+  }
+
+  dateInput.addEventListener('change', function () {
+    try { localStorage.setItem('aafw-basket-date', dateInput.value); } catch (e) {}
+    render();
+  });
+  function setFruit(v) {
+    fruitLeft = v;
+    yesBtn.setAttribute('aria-pressed', String(v));
+    noBtn.setAttribute('aria-pressed', String(!v));
+    render();
+  }
+  yesBtn.addEventListener('click', function () { setFruit(true); });
+  noBtn.addEventListener('click', function () { setFruit(false); });
+  render();
+
+  // ─── Pledge ───
+  var form = document.getElementById('pledgeForm');
+  var nameInput = document.getElementById('pledgeName');
+  var oathName = document.getElementById('oathName');
+  var error = document.getElementById('pledgeError');
+  var cardWrap = document.getElementById('memberCardWrap');
+  var ISSUES = 'https://github.com/alliance-against-food-waste/alliance-against-food-waste.github.io/issues/new';
+
+  nameInput.addEventListener('input', function () {
+    oathName.textContent = nameInput.value.trim() || 'the undersigned';
+  });
+
+  // Member number: a stable little hash of the name, so the same person
+  // always gets the same number on any device.
+  function memberNo(name) {
+    var h = 2166136261;
+    for (var i = 0; i < name.length; i++) { h ^= name.charCodeAt(i); h = Math.imul(h, 16777619); }
+    return 'AAFW-' + String((h >>> 0) % 100000).padStart(5, '0');
+  }
+
+  function showCard(p) {
+    document.getElementById('cardName').textContent = p.name;
+    document.getElementById('cardSig').textContent = p.name;
+    document.getElementById('cardNo').textContent = 'No. ' + memberNo(p.name.toLowerCase());
+    document.getElementById('cardDate').textContent = new Date(p.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+    var list = document.getElementById('cardVows');
+    list.innerHTML = '';
+    p.vows.forEach(function (v) { var li = document.createElement('li'); li.textContent = v; list.appendChild(li); });
+    var body = 'I, ' + p.name + ', have taken the pledge of the Alliance Against Food Waste and commit, from now on:\n\n' +
+      p.vows.map(function (v) { return '- [x] ' + v; }).join('\n') + '\n\nPlease add me to the roll of members. 🍽️';
+    document.getElementById('officialLink').href = ISSUES + '?title=' + encodeURIComponent('New member: ' + p.name) +
+      '&body=' + encodeURIComponent(body) + '&labels=' + encodeURIComponent('new member');
+    form.hidden = true;
+    cardWrap.hidden = false;
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = nameInput.value.trim();
+    var required = form.querySelectorAll('input[name="vow"][required]');
+    var missing = Array.prototype.some.call(required, function (c) { return !c.checked; });
+    if (!name) { error.textContent = 'A pledge needs a name. Even “Anonymous Apple” will do.'; nameInput.focus(); return; }
+    if (missing) { error.textContent = 'The first four commitments are not optional. That is rather the point.'; return; }
+    error.textContent = '';
+    var vows = Array.prototype.map.call(form.querySelectorAll('input[name="vow"]:checked'), function (c) { return c.value; });
+    var pledge = { name: name, vows: vows, date: new Date().toISOString() };
+    try { localStorage.setItem('aafw-pledge', JSON.stringify(pledge)); } catch (err) {}
+    showCard(pledge);
+    document.getElementById('plate').click();
+    cardWrap.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
+  });
+
+  document.getElementById('resignBtn').addEventListener('click', function () {
+    try { localStorage.removeItem('aafw-pledge'); } catch (err) {}
+    cardWrap.hidden = true;
+    form.hidden = false;
+    nameInput.focus();
+  });
+
+  document.getElementById('printCard').addEventListener('click', function () {
+    document.body.classList.add('printing-card');
+    window.print();
+  });
+  window.addEventListener('afterprint', function () { document.body.classList.remove('printing-card'); });
+
+  try {
+    var savedPledge = JSON.parse(localStorage.getItem('aafw-pledge'));
+    if (savedPledge && savedPledge.name) showCard(savedPledge);
+  } catch (err) {}
+})();
+</script>
+</body>
+</html>
