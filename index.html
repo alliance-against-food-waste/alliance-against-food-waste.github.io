@@ -3,18 +3,270 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alliance Against Food Waste | We eat up. | Future Society Hub</title>
-  <meta name="description" content="The Alliance Against Food Waste: we eat up, and we rescue the university fruit basket before it spoils. Founded by Luka Bekavac and Simon Mayer at the Future Society Hub, University of St.Gallen. Take the pledge.">
+  <title>Alliance Against Food Waste | We eat up. | HSG St.Gallen</title>
+  <meta name="description" content="We eat up. The Alliance Against Food Waste at the University of St.Gallen pledges clean plates and rescues the fruit basket before it spoils. Take the pledge.">
   <meta name="author" content="Alliance Against Food Waste">
-  <link rel="icon" href="assets/plate.svg" type="image/svg+xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#e63b2e">
   <link rel="canonical" href="https://alliance-against-food-waste.github.io/">
+  <link rel="icon" href="assets/plate.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="alternate" type="text/markdown" href="/llms.txt" title="Alliance Against Food Waste, for language models">
 
+  <!-- Open Graph / social -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Alliance Against Food Waste">
   <meta property="og:url" content="https://alliance-against-food-waste.github.io/">
   <meta property="og:title" content="Alliance Against Food Waste | We eat up.">
-  <meta property="og:description" content="We eat up, and we rescue the fruit basket before it spoils. A Future Society Hub initiative. Take the pledge.">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:description" content="We eat up, and we rescue the fruit basket before it spoils. A Future Society Hub initiative at the University of St.Gallen. Take the pledge.">
+  <meta property="og:image" content="https://alliance-against-food-waste.github.io/assets/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Alliance Against Food Waste: we eat up. A plate with a bitten apple, grapes, an orange and a banana.">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alliance Against Food Waste | We eat up.">
+  <meta name="twitter:description" content="We eat up, and we rescue the fruit basket before it spoils. Take the pledge.">
+  <meta name="twitter:image" content="https://alliance-against-food-waste.github.io/assets/social-card.png">
+
+  <!-- Structured data. The FAQ and policy text mirror the visible page: change both together. -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://alliance-against-food-waste.github.io/#organization",
+      "name": "Alliance Against Food Waste",
+      "alternateName": "AAFW",
+      "slogan": "We eat up.",
+      "url": "https://alliance-against-food-waste.github.io/",
+      "logo": "https://alliance-against-food-waste.github.io/assets/apple-touch-icon.png",
+      "image": "https://alliance-against-food-waste.github.io/assets/social-card.png",
+      "description": "A light-hearted initiative against food waste at the University of St.Gallen, Switzerland. Members pledge to eat up, take only what they will finish, and take the university fruit basket home before it spoils.",
+      "foundingDate": "2026-10",
+      "founder": [
+        {
+          "@id": "https://alliance-against-food-waste.github.io/#luka-bekavac"
+        },
+        {
+          "@id": "https://alliance-against-food-waste.github.io/#simon-mayer"
+        }
+      ],
+      "parentOrganization": {
+        "@type": "ResearchOrganization",
+        "@id": "https://futuresociety.ch/#organization",
+        "name": "Future Society Hub",
+        "alternateName": "FuSo",
+        "url": "https://futuresociety.ch/",
+        "parentOrganization": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of St.Gallen",
+          "alternateName": "HSG",
+          "url": "https://www.unisg.ch/"
+        }
+      },
+      "location": {
+        "@type": "Place",
+        "name": "University of St.Gallen",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "St. Gallen",
+          "addressCountry": "CH"
+        }
+      },
+      "knowsAbout": [
+        "food waste",
+        "food waste prevention",
+        "plate waste",
+        "portion sizes",
+        "workplace fruit baskets",
+        "leftovers"
+      ],
+      "sameAs": [
+        "https://github.com/alliance-against-food-waste"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://alliance-against-food-waste.github.io/#luka-bekavac",
+      "name": "Luka Bekavac",
+      "jobTitle": "PhD candidate",
+      "affiliation": {
+        "@id": "https://futuresociety.ch/#organization"
+      },
+      "sameAs": [
+        "https://scholar.google.com/citations?user=sLRhupsAAAAJ"
+      ],
+      "image": "https://alliance-against-food-waste.github.io/assets/images/luka.jpg"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://alliance-against-food-waste.github.io/#simon-mayer",
+      "name": "Simon Mayer",
+      "jobTitle": "Professor; Co-Director, Future Society Hub",
+      "affiliation": {
+        "@id": "https://futuresociety.ch/#organization"
+      },
+      "sameAs": [
+        "https://ics.unisg.ch/chairs/simon-mayer-interaction-and-communication-based-systems/"
+      ],
+      "image": "https://alliance-against-food-waste.github.io/assets/images/simon.jpg"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://alliance-against-food-waste.github.io/#website",
+      "name": "Alliance Against Food Waste",
+      "url": "https://alliance-against-food-waste.github.io/",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://alliance-against-food-waste.github.io/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://alliance-against-food-waste.github.io/#webpage",
+      "url": "https://alliance-against-food-waste.github.io/",
+      "name": "Alliance Against Food Waste | We eat up.",
+      "isPartOf": {
+        "@id": "https://alliance-against-food-waste.github.io/#website"
+      },
+      "about": {
+        "@id": "https://alliance-against-food-waste.github.io/#organization"
+      },
+      "primaryImageOfPage": "https://alliance-against-food-waste.github.io/assets/social-card.png",
+      "inLanguage": "en",
+      "datePublished": "2026-10-30",
+      "dateModified": "2026-10-31",
+      "citation": {
+        "@type": "Report",
+        "name": "Global Food Losses and Food Waste: Extent, Causes and Prevention",
+        "publisher": "Food and Agriculture Organization of the United Nations",
+        "datePublished": "2011",
+        "url": "https://www.fao.org/4/mb060e/mb060e00.htm"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://alliance-against-food-waste.github.io/#protocol",
+      "name": "Fruit Basket Protocol",
+      "alternateName": "Fruit Basket Policy",
+      "text": "If there is fruit left on the first Friday after the fruit basket has appeared (that’s today), start taking fruit home. If there is fruit left on the second Friday after the fruit basket has appeared, you must take fruit home. If you see a fruit basket on your way in, take it and put it on the table. It is permitted to arrange fruit in ways that afford taking/eating.",
+      "datePublished": "2026-10-30",
+      "author": {
+        "@id": "https://alliance-against-food-waste.github.io/#organization"
+      },
+      "url": "https://alliance-against-food-waste.github.io/#protocol"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://alliance-against-food-waste.github.io/#faq",
+      "url": "https://alliance-against-food-waste.github.io/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the Alliance Against Food Waste?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A light-hearted initiative of the Future Society Hub at the University of St.Gallen, Switzerland, against food waste. Members pledge to eat up: finish what is on their plate, take only what they will finish, and follow the Fruit Basket Protocol so that the university's fruit is eaten rather than thrown away."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who founded the alliance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Luka Bekavac and Simon Mayer, both of the Future Society Hub (FuSo) at the University of St.Gallen, founded it in October 2026."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Fruit Basket Protocol?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The alliance's rule for the university fruit basket. If fruit is left on the first Friday after the basket appeared, members start taking fruit home; if fruit is left on the second Friday, they must take it home. Anyone who sees a fruit basket on their way in carries it to the table, and arranging the fruit so it invites eating is explicitly allowed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I join?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sign the pledge at the bottom of this page to get your membership card. To appear on the list of members, submit the pre-filled GitHub issue that the card links to; a founding member approves it and your name is added automatically."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I am genuinely full?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Then you took too much, and Principle 02 has a word for you. In the meantime: box it, take it home, eat it later. Full is temporary. Leftovers keep."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a banana peel count as food waste?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Peels, cores, pits and stones are exempt. The alliance is ambitious, not unhinged. (Compost them, though.)"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "The basket appeared on a Friday. Is that the first Friday?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The first Friday is the first one after the basket appeared, so you get a full week of eating at work first. The Basket-o-meter knows this."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Somebody else left food on their plate. What do I do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lead by example. Finish your own plate, visibly and with relish. Direct intervention in other people's lunches is reserved for founding members, and only if they ask nicely."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I leave the alliance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. But the fruit will know."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a membership fee?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Membership is paid for entirely in clean plates."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MusicRecording",
+      "@id": "https://alliance-against-food-waste.github.io/#anthem",
+      "name": "We Eat Up",
+      "description": "The anthem of the Alliance Against Food Waste.",
+      "inLanguage": "en",
+      "recordingOf": {
+        "@type": "MusicComposition",
+        "name": "We Eat Up"
+      },
+      "audio": {
+        "@type": "AudioObject",
+        "contentUrl": "https://alliance-against-food-waste.github.io/assets/audio/we-eat-up.mp3",
+        "encodingFormat": "audio/mpeg"
+      },
+      "publisher": {
+        "@id": "https://alliance-against-food-waste.github.io/#organization"
+      }
+    }
+  ]
+}
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,6 +296,7 @@
   </div>
 </nav>
 
+<main>
 <!-- HERO -->
 <div id="hero">
   <div class="hero-text">
@@ -59,7 +312,7 @@
   <div class="hero-image">
     <!-- Easter eggs: clicking the plate makes it rain fruit; double-clicking/double-tapping plays the anthem, "We Eat Up" (see script). -->
     <button type="button" class="plate-btn" id="plate" aria-label="Shake the plate. Double-click to play the anthem" aria-pressed="false">
-      <img src="assets/plate.svg" alt="Alliance Against Food Waste logo: a plate with an apple (bitten), grapes, an orange and a banana">
+      <img src="assets/plate.svg" width="400" height="400" alt="Alliance Against Food Waste logo: a plate with an apple (bitten), grapes, an orange and a banana">
     </button>
     <audio id="anthem" src="assets/audio/we-eat-up.mp3" preload="none"></audio>
   </div>
@@ -71,6 +324,7 @@
     <div class="about-intro">
       <span class="intro-caret" aria-hidden="true">&rsaquo;</span>
       <p>The Alliance Against Food Waste is a coalition of people who have looked at a half-eaten plate and said: <em>not on my watch.</em> Our primary objective is simple: <strong>we eat up.</strong> Our secondary objective is the university fruit basket, which we rescue, according to a strict and legally dubious protocol, before a single banana goes brown.</p>
+      <p>Founded in October 2026 by Luka Bekavac and Simon Mayer at the <a class="text-link" href="https://futuresociety.ch/" target="_blank" rel="noopener">Future Society Hub (FuSo)</a> of the University of St.Gallen (HSG) in Switzerland, the alliance asks its members to finish what is on their plate, take only what they will eat, and take the university fruit basket home before it spoils.</p>
     </div>
   </div>
 </div>
@@ -93,7 +347,7 @@
       <h2>Food is for eating. <span class="hl">So we eat it.</span></h2>
     </div>
     <div class="sec-aside">
-      <p>Roughly a third of all food produced never gets eaten. We cannot fix global supply chains over lunch, but we can fix the last thirty centimetres between the plate and the bin.</p>
+      <p>Roughly a third of all food produced for people is lost or wasted, according to the UN's <a class="text-link" href="https://www.fao.org/4/mb060e/mb060e00.htm" target="_blank" rel="noopener">Food and Agriculture Organization</a>. We cannot fix global supply chains over lunch, but we can fix the last thirty centimetres between the plate and the bin.</p>
       <p>Membership is open to anyone with a mouth and a sense of responsibility. There are no fees, only seconds.</p>
     </div>
 
@@ -307,6 +561,22 @@
 
     <div class="sec-full faq">
       <details>
+        <summary>What is the Alliance Against Food Waste?</summary>
+        <p>A light-hearted initiative of the Future Society Hub at the University of St.Gallen, Switzerland, against food waste. Members pledge to eat up: finish what is on their plate, take only what they will finish, and follow the Fruit Basket Protocol so that the university's fruit is eaten rather than thrown away.</p>
+      </details>
+      <details>
+        <summary>Who founded the alliance?</summary>
+        <p>Luka Bekavac and Simon Mayer, both of the Future Society Hub (FuSo) at the University of St.Gallen, founded it in October 2026.</p>
+      </details>
+      <details>
+        <summary>What is the Fruit Basket Protocol?</summary>
+        <p>The alliance's rule for the university fruit basket. If fruit is left on the first Friday after the basket appeared, members start taking fruit home; if fruit is left on the second Friday, they must take it home. Anyone who sees a fruit basket on their way in carries it to the table, and arranging the fruit so it invites eating is explicitly allowed.</p>
+      </details>
+      <details>
+        <summary>How do I join?</summary>
+        <p>Sign the pledge at the bottom of this page to get your membership card. To appear on the list of members, submit the pre-filled GitHub issue that the card links to; a founding member approves it and your name is added automatically.</p>
+      </details>
+      <details>
         <summary>What if I am genuinely full?</summary>
         <p>Then you took too much, and Principle 02 has a word for you. In the meantime: box it, take it home, eat it later. Full is temporary. Leftovers keep.</p>
       </details>
@@ -399,6 +669,7 @@
     </div>
   </div>
 </section>
+</main>
 
 <div class="gingham" aria-hidden="true"></div>
 <footer class="site-footer">

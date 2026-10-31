@@ -801,7 +801,8 @@ footer.site-footer .container {
 
 /* ─── PRINT: just the membership card ─── */
 @media print {
-  body.printing-card > *:not(#join) { display: none !important; }
+  body.printing-card > *:not(main),
+  body.printing-card main > *:not(#join) { display: none !important; }
   body.printing-card #join { background: #fff; padding: 0; }
   body.printing-card #join .grid > *:not(.pledge-wrap) { display: none; }
   body.printing-card .member-actions,

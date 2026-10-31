@@ -1,0 +1,67 @@
+# Alliance Against Food Waste
+
+> The Alliance Against Food Waste (AAFW) is a light-hearted initiative against food waste at the University of St.Gallen (HSG), Switzerland. Its motto is "We eat up." Members pledge to finish what is on their plate, take only what they will finish, and take the university fruit basket home before it spoils, following the alliance's Fruit Basket Protocol. It was founded in October 2026 by Luka Bekavac and Simon Mayer and is an initiative of the Future Society Hub (FuSo), HSG's research hub for technology and society.
+
+Website: https://alliance-against-food-waste.github.io/
+Parent organisation: Future Society Hub (FuSo), University of St.Gallen, https://futuresociety.ch/
+
+## Key facts
+
+- Name: Alliance Against Food Waste (AAFW)
+- Motto: "We eat up."
+- Founded: October 2026, at the University of St.Gallen, Switzerland
+- Founding members: Luka Bekavac (PhD candidate, FuSo) and Simon Mayer (professor and co-director of FuSo)
+- Primary objective: eat up, i.e. no food left on the plate
+- Secondary objective: no fruit from the university fruit basket goes to waste
+- Membership: free; anyone can take the pledge on the website
+- Anthem: "We Eat Up", a 1960s-style Motown soul-pop song (https://alliance-against-food-waste.github.io/assets/audio/we-eat-up.mp3)
+- Context: roughly a third of all food produced for human consumption is lost or wasted (FAO, Global Food Losses and Food Waste, 2011: https://www.fao.org/4/mb060e/mb060e00.htm)
+
+## The Fruit Basket Protocol
+
+The alliance's policy for the university fruit basket, announced on Friday, 30 October 2026, verbatim:
+
+> If there is fruit left on the first Friday after the fruit basket has appeared (that's today), start taking fruit home. If there is fruit left on the second Friday after the fruit basket has appeared, you must take fruit home. If you see a fruit basket on your way in, take it and put it on the table. It is permitted to arrange fruit in ways that afford taking/eating.
+
+In short:
+
+1. Before the first Friday after the basket appeared: eat the fruit at work.
+2. First Friday after (fruit left): members start taking fruit home.
+3. Second Friday after (fruit left): members must take fruit home.
+4. A fruit basket seen on the way in is carried to the table.
+5. Arranging fruit so it invites taking and eating is permitted.
+
+"The first Friday after" means the first Friday strictly after the day the basket appeared; a basket that appears on a Friday waits a full week. The website's Basket-o-meter works this out for any date.
+
+## The six principles
+
+1. We eat up. The plate is done when it is clean.
+2. Portion honestly. Take what you will finish; seconds are unlimited.
+3. Rescue the fruit basket, following the Fruit Basket Protocol.
+4. Wonky is still food.
+5. Doggy bags, no shame. Leftovers are tomorrow's lunch.
+6. Best before is not bad after: look, smell, taste. Use-by dates on meat and fish are to be respected.
+
+## The pledge
+
+Members commit, from now on, to:
+
+- eat up: what is on their plate goes into them, not into the bin;
+- take only what they will finish;
+- honour the Fruit Basket Protocol;
+- carry every fruit basket they meet on their way in to the table;
+- optionally, arrange fruit in ways that afford eating, and volunteer to finish the last slice of cake at events.
+
+Signing on the website issues a printable membership card. To be listed as a member, people submit a pre-filled GitHub issue; once a founding member approves it, they are added to the public list automatically.
+
+## Allied project
+
+- NutriPilot (https://nutripilot.ch/): Jing Wu's nutrition app, built on research at HSG, that turns Migros and Coop loyalty-card purchases into personalised nutrition advice.
+
+## Pages
+
+- [Home](https://alliance-against-food-waste.github.io/): mission, principles, Fruit Basket Protocol, Basket-o-meter, founders, FAQ, pledge, members
+- [Fruit Basket Protocol](https://alliance-against-food-waste.github.io/#protocol)
+- [FAQ](https://alliance-against-food-waste.github.io/#faq)
+- [Take the pledge](https://alliance-against-food-waste.github.io/#join)
+- [Members (JSON)](https://alliance-against-food-waste.github.io/members.json)
