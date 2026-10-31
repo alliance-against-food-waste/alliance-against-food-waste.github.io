@@ -247,6 +247,12 @@ h1 {
 @keyframes fruit-fall {
   to { transform: translateY(calc(100vh + 120px)) rotate(var(--spin, 360deg)); }
 }
+/* Reduced-motion version: no movement, just a fade in and out. */
+.fruit-drop--calm { opacity: 0; animation-name: fruit-fade; animation-timing-function: ease-in-out; }
+@keyframes fruit-fade {
+  30%, 70% { opacity: 1; }
+  to { opacity: 0; }
+}
 
 /* ─── MISSION BOX ─── */
 .intro-standalone { padding: 0 0 5rem; }

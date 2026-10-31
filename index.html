@@ -427,18 +427,26 @@
   // fire reliably on a double-tap; .plate-btn's touch-action: manipulation
   // stops the double-tap from zooming the page instead.
   var fruits = ['🍎', '🍌', '🍊', '🍇', '🍐', '🥝', '🍓', '🍑', '🥕', '🍋'];
-  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Read at call time, so changing the OS setting applies without a reload.
+  var motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
   var plate = document.getElementById('plate');
   function rainFruit() {
-    if (reduceMotion) return;
-    for (var i = 0; i < 24; i++) {
+    // With "reduce motion" on (e.g. Windows' Animation effects switched off),
+    // fruit fades in and out in place instead of falling and spinning.
+    var calm = motionQuery.matches;
+    for (var i = 0; i < (calm ? 14 : 24); i++) {
       var f = document.createElement('span');
-      f.className = 'fruit-drop';
+      f.className = 'fruit-drop' + (calm ? ' fruit-drop--calm' : '');
       f.textContent = fruits[Math.floor(Math.random() * fruits.length)];
-      f.style.left = (Math.random() * 100) + 'vw';
-      f.style.animationDuration = (1.6 + Math.random() * 1.6) + 's';
+      f.style.left = (Math.random() * 95) + 'vw';
+      if (calm) {
+        f.style.top = (8 + Math.random() * 80) + 'vh';
+        f.style.animationDuration = (1.4 + Math.random() * 0.8) + 's';
+      } else {
+        f.style.animationDuration = (1.6 + Math.random() * 1.6) + 's';
+        f.style.setProperty('--spin', ((Math.random() * 720) - 360) + 'deg');
+      }
       f.style.animationDelay = (Math.random() * 0.6) + 's';
-      f.style.setProperty('--spin', ((Math.random() * 720) - 360) + 'deg');
       f.addEventListener('animationend', function () { this.remove(); });
       document.body.appendChild(f);
     }
@@ -609,7 +617,7 @@
     try { localStorage.setItem('aafw-pledge', JSON.stringify(pledge)); } catch (err) {}
     showCard(pledge);
     rainFruit();
-    cardWrap.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
+    cardWrap.scrollIntoView({ behavior: motionQuery.matches ? 'auto' : 'smooth', block: 'center' });
   });
 
   document.getElementById('resignBtn').addEventListener('click', function () {
