@@ -57,10 +57,11 @@
     </div>
   </div>
   <div class="hero-image">
-    <!-- Easter egg: clicking the plate makes it rain fruit (see script). -->
-    <button type="button" class="plate-btn" id="plate" aria-label="Shake the plate">
+    <!-- Easter eggs: clicking the plate makes it rain fruit; double-clicking/double-tapping plays the anthem, "We Eat Up" (see script). -->
+    <button type="button" class="plate-btn" id="plate" aria-label="Shake the plate. Double-click to play the anthem" aria-pressed="false">
       <img src="assets/plate.svg" alt="Alliance Against Food Waste logo: a plate with an apple (bitten), grapes, an orange and a banana">
     </button>
+    <audio id="anthem" src="assets/audio/we-eat-up.mp3" preload="none"></audio>
   </div>
 </div>
 
@@ -419,10 +420,16 @@
 
 <script>
 (function () {
-  // ─── Plate easter egg: fruit rain ───
+  // ─── Plate easter eggs ───
+  // Click: fruit rain. Double-click / double-tap: the anthem, "We Eat Up"
+  // (again to pause). Double-clicks are detected from two clicks in quick
+  // succession rather than the dblclick event, which mobile browsers do not
+  // fire reliably on a double-tap; .plate-btn's touch-action: manipulation
+  // stops the double-tap from zooming the page instead.
   var fruits = ['🍎', '🍌', '🍊', '🍇', '🍐', '🥝', '🍓', '🍑', '🥕', '🍋'];
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  document.getElementById('plate').addEventListener('click', function () {
+  var plate = document.getElementById('plate');
+  function rainFruit() {
     if (reduceMotion) return;
     for (var i = 0; i < 24; i++) {
       var f = document.createElement('span');
@@ -434,6 +441,27 @@
       f.style.setProperty('--spin', ((Math.random() * 720) - 360) + 'deg');
       f.addEventListener('animationend', function () { this.remove(); });
       document.body.appendChild(f);
+    }
+  }
+
+  var anthem = document.getElementById('anthem');
+  function toggleAnthem() {
+    if (anthem.paused) anthem.play().catch(function () {});
+    else anthem.pause();
+  }
+  anthem.addEventListener('play', function () { plate.classList.add('playing'); plate.setAttribute('aria-pressed', 'true'); });
+  anthem.addEventListener('pause', function () { plate.classList.remove('playing'); plate.setAttribute('aria-pressed', 'false'); });
+  anthem.addEventListener('ended', function () { anthem.currentTime = 0; });
+
+  var lastClick = 0;
+  plate.addEventListener('click', function () {
+    var now = Date.now();
+    if (now - lastClick < 500) {
+      lastClick = 0;
+      toggleAnthem();
+    } else {
+      lastClick = now;
+      rainFruit();
     }
   });
 
@@ -580,7 +608,7 @@
     var pledge = { name: name, vows: vows, date: new Date().toISOString() };
     try { localStorage.setItem('aafw-pledge', JSON.stringify(pledge)); } catch (err) {}
     showCard(pledge);
-    document.getElementById('plate').click();
+    rainFruit();
     cardWrap.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
   });
 

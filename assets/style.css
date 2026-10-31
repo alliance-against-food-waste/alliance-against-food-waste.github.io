@@ -220,7 +220,20 @@ h1 {
 }
 .plate-btn:hover { transform: rotate(-8deg) scale(1.02); }
 .plate-btn img { display: block; width: 100%; }
-@media (prefers-reduced-motion: reduce) { .plate-btn { transition: none; } }
+/* No double-tap-to-zoom on the plate: a double-tap plays the anthem. */
+.plate-btn { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+/* While the anthem plays, the plate bobs to its 124 BPM (one beat ≈ 0.484s). */
+.plate-btn.playing img { animation: plate-bop 0.968s ease-in-out infinite; }
+@keyframes plate-bop {
+  0%, 100% { transform: rotate(-6deg) scale(1); }
+  25%      { transform: rotate(0deg) scale(1.04); }
+  50%      { transform: rotate(6deg) scale(1); }
+  75%      { transform: rotate(0deg) scale(1.04); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .plate-btn { transition: none; }
+  .plate-btn.playing img { animation: none; }
+}
 
 /* Fruit rain from clicking the plate. */
 .fruit-drop {
